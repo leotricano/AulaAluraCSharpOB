@@ -1,6 +1,7 @@
-﻿
-//Importando do arquivo de classe
+﻿//Importando do arquivo de classe
 using bytebank;
+
+
 
 // Criando Objeto contaDoAndre
 ContaCorrente contaDoAndre = new ContaCorrente(); 
@@ -17,3 +18,28 @@ contaDoAndre.saldo = 100;
 //Mostrando o valor atravez do WriteLine
 Console.WriteLine("Saldo conta do Andre = " + contaDoAndre.saldo);
 
+//Utlizando o metodo Depositar
+contaDoAndre.Depositar(100);
+
+//Mostrando resultado depois de ter usado o metodo Depositar
+Console.WriteLine("Saldo conta do Andre pós-deposito = " + contaDoAndre.saldo);
+
+//Utilizando o metodo Saque
+contaDoAndre.Saque(100);
+
+//Mostrando resultado depois de ter usado o metodo Saque
+Console.WriteLine("Saldo conta do Andre pós-saque = " + contaDoAndre.saldo);
+
+
+
+/*
+
+ContaCorrente conta = new ContaCorrente();
+Console.WriteLine($"Titular da conta: {conta.titular}");
+Console.WriteLine($"Número da conta: {conta.conta}");
+Console.WriteLine($"Agência: {conta.numero_agencia}");
+Console.WriteLine($"Saldo R$ {String.Format("{0:0.00}", conta.saldo)}");
+
+Console.ReadKey();
+
+*/

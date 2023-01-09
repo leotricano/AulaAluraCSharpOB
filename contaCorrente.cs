@@ -5,12 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace bytebank
-{
-    public class ContaCorrente // Definição de Classe "Conta Corrente"
-    {
-       public int numero_agencia; //Campos do objeto
-       public string conta;
-       public string titular;
-       public double saldo;
+
+{// Definição de Classe "Conta Corrente"
+    public class ContaCorrente
+    {  //Campos do objeto
+        public int numero_agencia;
+        public string conta;
+        public string titular;
+        public double saldo;
+
+        // Criando metodo Depositar
+        public void Depositar(double valor)
+        {   
+            //Definindo o comportamento do metodo
+            this.saldo += valor;
+        }
+        public void Saque(double valor)
+        {
+            //Definindo o comportamento do metodo
+            this.saldo -= valor;
+        }
     }
 }
