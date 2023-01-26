@@ -25,13 +25,36 @@ contaDoAndre.Depositar(100);
 Console.WriteLine("Saldo conta do Andre pós-deposito = " + contaDoAndre.saldo);
 
 //Utilizando o metodo Saque
-contaDoAndre.Saque(100);
+if(contaDoAndre.Saque(400))
+{   //Mostrando resultado depois de ter usado o metodo Saque
+    Console.WriteLine("Saldo conta do Andre pós-saque = " + contaDoAndre.saldo);
+}
+else
+{   //Mostrando resultado depois de ter usado o metodo Saque
+    Console.WriteLine("Saldo inuficiente para saque");
+}
 
-//Mostrando resultado depois de ter usado o metodo Saque
-Console.WriteLine("Saldo conta do Andre pós-saque = " + contaDoAndre.saldo);
 
 
 
+// Criando Objeto contaDaMaria
+ContaCorrente contaDaMaria = new ContaCorrente();
+
+//Inserindo valores para os objetos
+contaDaMaria.titular = "Maria Souza";
+//Inserindo valores para os objetos
+contaDaMaria.numero_agencia = 17;
+//Inserindo valores para os objetos
+contaDaMaria.conta = "1010-5";
+//Inserindo valores para os objetos
+contaDaMaria.saldo = 350;
+//Mostrando o saldo da Maria no programa
+Console.WriteLine("Saldo da conta da Maria =" + contaDaMaria.saldo);
+
+//Utilizando o metodo Transferir 
+contaDaMaria.Transferir(50, contaDaMaria);
+Console.WriteLine("Saldo do Andre = " + contaDoAndre.saldo);
+Console.WriteLine("Saldo da Maria = " + contaDaMaria.saldo);
 /*
 
 ContaCorrente conta = new ContaCorrente();
